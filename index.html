@@ -43,13 +43,13 @@
         const SITE_URL = '';
         function supportsPreload(){var rl=document.createElement("link").relList;if(rl.supports && "preload"){return rl.supports("preload");}else{return false;}}
         if(!supportsPreload()){
-            var style_links = document.getElementsByClassName("style_link");
+            let style_links = document.getElementsByClassName("style_link");
             for(let i=0;i<style_links.length;i++){
                 style_links[i].setAttribute("rel", "stylesheet");
                 style_links[i].removeAttribute("as");
                 style_links[i].removeAttribute("onload");
             }
-            var font_links = document.getElementsByClassName("font_link");
+            let font_links = document.getElementsByClassName("font_link");
             for(let i=0;i<font_links.length;i++){
                 font_links[i].setAttribute("rel", "font");
             }
